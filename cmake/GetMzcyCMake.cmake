@@ -12,7 +12,7 @@ macro(GetMzcyCMake)
     FetchContent_Declare(
       MzcyCMake
       GIT_REPOSITORY ${_address}
-      GIT_TAG ${MzcyCMake_VERSION}
+      GIT_TAG main
     )
     FetchContent_MakeAvailable(MzcyCMake)
     message(STATUS "MzcyCMake ${MzcyCMake_VERSION} build done")
