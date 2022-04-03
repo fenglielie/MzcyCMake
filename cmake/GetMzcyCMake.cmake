@@ -2,19 +2,19 @@
 
 macro(GetMzcyCMake)
   include(FetchContent)
-  set(UCMake_VERSION 0.6.0)
-  message(STATUS "find package: UCMake ${UCMake_VERSION}")
-  find_package(UCMake ${UCMake_VERSION} QUIET)
-  if(NOT UCMake_FOUND)
-    message(STATUS "UCMake ${UCMake_VERSION} not found")
-    set(_address "https://github.com/Ubpa/UCMake")
-    message(STATUS "fetch: ${_address} with tag ${UCMake_VERSION}")
+  set(MzcyCMake_VERSION 0.1)
+  message(STATUS "find package: MzcyCMake ${MzcyCMake_VERSION}")
+  find_package(MzcyCMake ${MzcyCMake_VERSION} QUIET)
+  if(NOT MzcyCMake_FOUND)
+    message(STATUS "MzcyCMake ${MzcyCMake_VERSION} not found")
+    set(_address "https://github.com/fenglielie/MzcyCMake")
+    message(STATUS "fetch: ${_address} with tag ${MzcyCMake_VERSION}")
     FetchContent_Declare(
-      UCMake
+      MzcyCMake
       GIT_REPOSITORY ${_address}
-      GIT_TAG ${UCMake_VERSION}
+      GIT_TAG ${MzcyCMake_VERSION}
     )
-    FetchContent_MakeAvailable(UCMake)
-    message(STATUS "UCMake ${UCMake_VERSION} build done")
+    FetchContent_MakeAvailable(MzcyCMake)
+    message(STATUS "MzcyCMake ${MzcyCMake_VERSION} build done")
   endif()
 endmacro()
