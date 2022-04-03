@@ -3,7 +3,7 @@
 macro(GetMzcyCMake)
   include(FetchContent)
   message(STATUS "find package: MzcyCMake ")
-  find_package(MzcyCMake)
+  #find_package(MzcyCMake)
   if(NOT MzcyCMake_FOUND)
     message(STATUS "MzcyCMake not found")
     set(_address "https://gitee.com/fenglielie_ee/MzcyCMake")
