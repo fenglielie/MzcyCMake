@@ -15,3 +15,5 @@ Mzcy_InitProject()
 
 # subdirs
 Mzcy_AddSubDirsRec(source)
+
+include(cmake/InstallMzcyCMake.cmake)

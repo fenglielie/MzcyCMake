@@ -2,19 +2,19 @@
 
 macro(GetMzcyCMake)
   include(FetchContent)
-  set(MzcyCMake_VERSION 0.1)
-  message(STATUS "find package: MzcyCMake ${MzcyCMake_VERSION}")
-  find_package(MzcyCMake ${MzcyCMake_VERSION} QUIET)
+  message(STATUS "find package: MzcyCMake ")
+  find_package(MzcyCMake)
   if(NOT MzcyCMake_FOUND)
-    message(STATUS "MzcyCMake ${MzcyCMake_VERSION} not found")
-    set(_address "https://github.com/fenglielie/MzcyCMake")
-    message(STATUS "fetch: ${_address} with tag ${MzcyCMake_VERSION}")
+    message(STATUS "MzcyCMake not found")
+    set(_address "https://gitee.com/fenglielie_ee/MzcyCMake")
+    message(STATUS "fetch: ${_address} with tag main")
     FetchContent_Declare(
       MzcyCMake
       GIT_REPOSITORY ${_address}
       GIT_TAG main
+      SOURCE_DIR ${PROJECT_SOURCE_DIR}/MzcyCMake
     )
     FetchContent_MakeAvailable(MzcyCMake)
-    message(STATUS "MzcyCMake ${MzcyCMake_VERSION} build done")
+    message(STATUS "MzcyCMake  build done")
   endif()
 endmacro()
