@@ -1,0 +1,1 @@
+Mzcy_SimpleExe(test1)
